@@ -34,7 +34,7 @@ body {
     border-radius: 1rem;
     padding: 1.5rem;
     width: 70%;
-    height: 80%;
+    min-height: auto;
 }
 
 /*Classes*/
@@ -57,7 +57,7 @@ body {
     background-color: hsl(0, 0%, 20%);
     margin: 1rem 0 1rem 0;
     padding: 0.8rem 0 0.8rem 0;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     font-family: Inter;
     font-size: 1rem;
     font-weight: 600;
@@ -91,32 +91,51 @@ body {
 }
 
 @media screen and (min-width: 576px) {
-
     .description-container {
-        width: 50%;
+        max-width: 35%;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .description-container {
-        width: 50%;
+    .avatar {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .user-link {
+        margin: 0.6rem 0 0.6rem 0;
+        padding: 0.8rem 0 0.8rem 0;
+    }
+
+    #user-name {
+        margin-top: 2rem;
+    }
+
+    #user-description {
+        margin: 2rem 0 2rem 0;
     }
 }
 
 @media screen and (min-width: 992px){
     .description-container {
-        width: 40%;
+        max-width: 35%;
+
     }
 }
 
 @media screen and (min-width: 1200px) {
     .description-container {
-        width: 30%;
-    }    
+        max-width: 20%;
+        height: auto;
+    }
 }
 
-@media screen and (min-width: 1400px) {
-    .description-container {
-        width: 20%;
+@media screen and (orientation: landscape) and (max-width: 992px){
+    html {
+        font-size: 8px;
     }
+    .description-container {
+        height: auto;
+        max-width: 35%;
+    }    
 }
